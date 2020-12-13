@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vortex_Ankita</title>
+    <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width">
+    <link rel="stylesheet" href="style.css">
+    <style>
+.but {
+  border-radius: 3px;
+  background-color: #00cc00;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 20px;
+  width: 180px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.but span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.but span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.but:hover span {
+  padding-right: 25px;
+}
+
+.but:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+</style>
+</head>
+<body>
+    <section id="header">
+    <div class="header container">
+      <div class="nav-bar">
+        <h1 style="font-family: jokerman; color: #fff; margin-left: 10px;" class="logo">Vortex_Ankita</h1>
+        <div class="nav-list">
+          <div class="hamburger"><div class="bar"></div></div>
+          <ul>
+            <li><a href="#banner" data-after="Home">Home</a></li>
+            <li><a href="#about" data-after="About">About US</a></li>
+            <li><a href="#projects" data-after="Services">Sevices</a></li>
+            <li><a href="#impact" data-after="Impacts">Impacts</a></li>
+            <li><a href="#blogs" data-after="Blogs">Blogs</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<section class="banner" id="banner">
+    <div class="banner">
+    <div class="content">
+        <h1>Welcome To</h1>
+        <h3>The World Of Psychology</h3>
+        <div>
+            <button type="button"><span class="x"></span>Book Session</button>
+        </div>
+    </div>
+</div>
+</section>
+<script type="text/javascript">
+    const hamburger = document.querySelector('.header .nav-bar .nav-list .hamburger');
+const mobile_menu = document.querySelector('.header .nav-bar .nav-list ul');
+const menu_item = document.querySelectorAll('.header .nav-bar .nav-list ul li a');
+const header = document.querySelector('.header.container');
+
+hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    mobile_menu.classList.toggle('active');
+});
+
+document.addEventListener('scroll', () => {
+    var scroll_position = window.scrollY;
+    if (scroll_position > 200) {
+        header.style.backgroundColor = '#cc00ff';
+    } else {
+        header.style.backgroundColor = 'transparent';
+    }
+});
+
+menu_item.forEach((item) => {
+    item.addEventListener('click', () => {
+        hamburger.classList.toggle('active');
+        mobile_menu.classList.toggle('active');
+    });
+});
+
+</script>
+<section id="about">
+    <div class="about container">
+      <div class="col-left">
+        <div class="about-img">
+          <img src="Images//Anu (1).jpg" alt="img">
+        </div>
+      </div>
+      <div class="col-right">
+        <h1 class="section-title">About US</h1>
+        <p class="c">Hi! I'm Ankita Chahande.</p>
+        <p  class="a">Ankita always wanted to bring about a change in everyone's perception of mental health, and so after graduating as an Engineer, she chose to become a Psychotherapist.
+
+Ankita's favorite part about her job is being witness to the transformation that her clients go through once they start therapy. She believes that it's mostly like the 'Butterfly Effect'- when one person goes through a significant positive change, it impacts 4 more people related to them.
+
+Ankita gets excited by the idea of creating a change, no matter how small or big it may seem. For her, it could even be cooking the most regular meal in a different way. A lover of metaphysics, she enjoys talking to like-minded people.
+
+Ankita is a certified Career counselor by MoE&L. Assertive communication style is one of her go-to ways for counselling.
+She is an explorer. She hopes to travel the world, and by that, she not only means going to famous landmarks and locations, but also the less talked about cities. As much as Ankita loves everything around her, she loves herself the most.</p>
+        
+      </div>
+    </div>
+  </section>
+
+<section id="projects">
+    <div class="projects container">
+      <div class="projects-header">
+        <h1 class="section-title">SERVICES</h1>
+      </div>
+      <div class="all-projects">
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Depression</h1>
+            <h2>Are you in Depression?</h2>
+            <p>If you're feeling anxiety and depression always being sad, don't know what's your purpose of living always feeling low? Don't worry You're at the right place. Book a session Now!</p>
+            
+            <div>
+            <button class="but"><span>Book Session</span></button>
+        </div>
+        
+          </div>
+          <div class="project-img">
+            <img src="Images\\anime-1.png" alt="img" height="400px" width="300px">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Couple Therapy</h1>
+            <h2>Relationship Issue</h2>
+            <p>Depressed after having a BreakUp? or Having Negative thoughts? Here's the the Place, Book a session Now!</p>
+            <div>
+            <button class="but"><span>Book Session</span></button>
+        </div>
+          </div>
+          
+          <div class="project-img">
+            <img src="Images\\anime-2.png" alt="img" height="400px" width="300px">
+          </div>
+        </div>
+        <div class="project-item">
+          <div class="project-info">
+            <h1>Be Confident</h1>
+            <h2>Self-Love</h2>
+            <p>We believe in Self-Love, it is the only key to move on to successed to achieve the goals, why the wait? Book a session Now!</p>
+            <div>
+            <button class="but"><span>Book Session</span></button>
+        </div>
+          </div>
+          <div class="project-img">
+            <img src="Images\\anime-3.png" alt="img" height="400px" width="300px">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+<!---Start Impact--->
+  <section id="impact">
+    <div class="impact container">
+      <div class="impact-top">
+        <h1 class="section-title">IMPACT</h1>
+        <h1>What Clients Say About Us</h1>
+      </div>
+      <div class="impact-bottom">
+        <div class="impact-item">
+          <div class="icon"><img src="https://img.icons8.com/officel/70/000000/reviewer-female.png"/></div>
+          <h2>Panic Attacks</h2>
+          <p>The Therapy theoram Ankita have applied on me was amazing, Thier service of self-love was outstanding and helping me a lot from recover my past.</p>
+        </div>
+        <div class="impact-item">
+          <div class="icon"><img src="https://img.icons8.com/officel/70/000000/reviewer-female.png"/></div>
+          <h2>Anxiety</h2>
+          <p>The Therapy theoram Ankita have applied on me was amazing, Thier service of self-love was outstanding and helping me a lot from recover my past.</p>
+        </div>
+        <div class="impact-item">
+          <div class="icon"><img src="https://img.icons8.com/officel/70/000000/reviewer-female.png"/></div>
+          <h2>Low Mood</h2>
+          <p>The Therapy theoram Ankita have applied on me was amazing, Thier service of self-love was outstanding and helping me a lot from recover my past.</p>
+        </div>
+        <div class="impact-item">
+          <div class="icon"><img src="https://img.icons8.com/officel/70/000000/reviewer-female.png"/></div>
+          <h2>Couple Therapy</h2>
+          <p>The Therapy theoram Ankita have applied on me was amazing, Thier service of self-love was outstanding and helping me a lot from recover my past.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End impact Section -->
+      
+<section id="blogs">
+        <h1 class="section-title">BLOGS</h1>
+<div class="cards">
+        <div class="card card1">
+            <div class="ner">
+                <img src="Images\\animal.jpg" alt="las vegas">
+            </div>
+            <div class="details">
+                <h3>Are you Feeling Anxiety?</h3>
+                <p>How to know if you're feeling anxiety or not?</p>
+                <p>To know more <a href="" style="color: white;">Click here</a></p>
+            </div>
+        </div>
+        <div class="card card2">
+            <div class="ner">
+                <img src="Images\\action (1).jpg" alt="New York">
+            </div>
+            <div class="details">
+                <h3>How to recover from negative feeling?</h3>
+                <p>How to know if you're feeling anxiety or not?</p>
+                <p>To know more <a href="" style="color: white;">Click here</a></p>
+            </div>
+        </div>
+        <div class="card card3">
+            <div class="ner">
+                <img src="Images\\action (2).jpg" alt="Singapore">
+            </div>
+            <div class="details">
+                <h3>Self-Love is the Key.</h3>
+                <p>How to know if you're feeling anxiety or not?</p>
+                <p>To know more <a href="" style="color: white;">Click here</a></p>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+  <section id="footer">
+    <div class="footer container">
+      <h1 style="font-size: 1.5rem;
+    text-transform: uppercase;
+    color: white;">Ankita Chahande</h1>
+      <h2>Contact US</h2>
+      <p><b>Email</b>:anu2284@gmail.com</p>
+      <div class="social-icon">
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/facebook-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/instagram-new.png"/></a>
+        </div>
+        <div class="social-item">
+          <a href="#"><img src="https://img.icons8.com/bubbles/100/000000/twitter.png"/></a>
+        </div>
+      </div>
+      <p>Copyright © 2020 Ankita. All rights reserved</p>
+    </div>
+  </section>
+  <!-- End Footer -->
+</body>
+</html>
